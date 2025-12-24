@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<Html>
+<Head>
+  <Meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" content="width=device-width">
+  
+  <Script type="text/javascript" src="javascriptservice\script.js"></script>
+  <Script type="text/javascript" src="javascriptservice\menubar.js"></script>
+  
+  <Link rel="icon" type="image/x-icon" href="webicon.png">
+  <Link rel="stylesheet" href="styling.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  
+  <Title>ProgrammingIdle</Title>
+<Body bgcolor="darkblue" onload="clock()">
+
+
+<Header class="header"><Div class="container"><Nav class="nav">
+<b><var><Font color=orange face=Tahoma>Programming</Font><Font color=white face=tahoma>Idle</Font></var></b>
+<Var><Font color=white face=tahoma size=1> - An idle game made by Mr. Thristan Ezra</Font></Var>
+
+<Button class="bold" onclick="websiteSettings()">Settings</Button>
+<Button class="bold" onclick="websiteInfo()">Info</Button>
+<Button class="bold" onclick="gameSaved()">Save Data</Button>
+<Button class="bold" onclick="gameLoaded()">Load Data</Button>
+</Nav></Div></Header>
+
+
+
+  <table width=50% border=1px align=left bgcolor=white>
+    <tr><td class="economy-level" colspan="2">Current Economy level: <Br>Lv. <Span id="YourLevel">0</Span> <Font size="1">(Level up Price: <Span id="LvPrice">9</Span>🪙)</Font></Font></td></tr><tr>
+      <td class="sps" colspan="2">Scripts per second: <Br><span id="ScriptPerSec">0</span><Font class="textfont"> × <span id="MultiplyScriptsPerSec">1</span></Font>🗒️ / s</Font></td></tr>
+    <tr><td class="coin" colspan="2">Coins: <Br><span id="MyMoney">0</span>🪙</Font></td></tr><tr>
+      <td class="currency-script" colspan="2">Scripts: <Br><span id="ScriptsWritten">0</span>🗒️</Font></td></tr>
+    
+	<tr><td width="50%">Programmers: <Br><span id="JSProgrammers">0</span>💻</td>
+	<td width="50%">Websites: <Br><span id="Website">0</span>🌐</td></tr>
+	
+	<tr><td>CyberSecurities: <Br><span id="JavaSecurity">0</span>👨‍💻</td>
+	<td>Servers: <Br><span id="JavaServer">0</span>📡</td></tr>
+    
+	<tr><td>Ads: <Br><span id="AdsPublished">0</span>🗨️</td>
+	<td>Moderators: <Br><span id="Mods">0</span>🎧🎙️</td></tr>
+	
+	<tr><td>Workers: <Br><span id="Workers">0</span>🧑‍💼</td>
+	<td>Code Variables: <Br><span id="Variables">0</span>🔤</td></tr>
+	
+	<tr><td>Employees: <Br><span id="Employees">0</span>🧐</td>
+	<td>No. of Headquarters: <Br><span id="HeadQuarters">0</span>🏢</td></tr></Table>
+
+<Table align=right width=49.5% bgcolor="#929076">
+<Tr><Td colspan="5" height=210px><Center><button class="clicky" onclick="Makescripts()"><Img src="images\scriptwriting.jpg" align="center" width="150px" height="150px"></button>
+<button class="clicky" onclick="sellscripts()"><Img src="images\sell.jpg" align="center" width="150px" height="150px"></button>
+<button class="clicky" onclick="LevelUp()"><Img src="images\lvlup.jpg" align="center" width="150px" height="150px"></button>
+</Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Hire1Programmer()">Hire 1 Programmer<Br>25🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire10Programmer()">Hire 10 Programmers<Br>250🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire25Programmer()">Hire 25 Programmers<Br>625🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire50Programmer()">Hire 50 Programmers<Br>1.25K</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire100Programmer()">Hire 100 Programmers<Br>2.5K🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Buy1JSec()">Buy 1 CyberSecurity<Br>500🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Buy10JSec()">Buy 10 CyberSecurities<Br>22.5K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Buy25JSec()">Buy 25 CyberSecurities<Br>45K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Buy50JSec()">Buy 50 CyberSecurities<Br>90K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Buy100JSec()">Buy 100 CyberSecurities<Br>200K🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Make1Ad()">Make 1 Ad<Br>10K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make10Ads()">Make 10 Ads<Br>100K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make25Ads()">Make 25 Ads<Br>250K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make50Ads()">Make 50 Ads<Br>500K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make100Ads()">Make 100 Ads<Br>1M🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Hire1Worker()">Hire 1 Worker<Br>50K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire10Workers()">Hire 10 Workers<Br>500K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire25Workers()">Hire 25 Workers<Br>1.5M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire50Workers()">Hire 50 Workers<Br>3M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire100Workers()">Hire 100 Workers<Br>6M🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Hire1Employee()">Hire 1 Employee<Br>155K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire10Employees()">Hire 10 Employees<Br>1.55M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire25Employees()">Hire 25 Employees<Br>3.87M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire50Employees()">Hire 50 Employees<Br>7.75M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire100Employees()">Hire 100 Employees<Br>15.5M🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Build1Website()">Build 1 Website<Br>220K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build10Website()">Build 10 Websites<Br>2.2M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build25Website()">Build 25 Websites<Br>5.5M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build50Website()">Build 50 Websites<Br>11M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build100Website()">Build 100 Websites<Br>22M🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Make1JavaServer()">Make 1 Server<Br>500K🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make10JavaServers()">Make 10 Servers<Br>5M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make25JavaServers()">Make 25 Servers<Br>12.5M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make50JavaServers()">Make 50 Servers<Br>25M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make100JavaServers()">Make 100 Servers<Br>50M🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Hire1Moderator()">Hire 1 Moderator<Br>3M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire10Moderators()">Hire 10 Moderators<Br>30M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire25Moderators()">Hire 25 Moderators<Br>75M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire50Moderators()">Hire 50 Moderators<Br>150M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Hire100Moderators()">Hiree 100 Moderators<Br>300M🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Make1Variable()">Make 1 Code Variable<Br>5M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make10Variables()">Make 10 Code Variables<Br>50M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make25Variables()">Make 25 Code Variables<Br>125M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make50Variables()">Make 50 Code Variables<Br>250M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Make100Variables()">Make 100 Code Variables<Br>500M🪙</Button></Td></Tr>
+
+<Tr><Td><Button class="PurchaseButton" onclick="Build1Headquarter()">Build 1 Headquarter<Br>17M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build10Headquarters()">Build 10 Headquarters<Br>170M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build25Headquarters()">Build 25 Headquarters<Br>425M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build50Headquarters()">Build 50 Headquarters<Br>850M🪙</Button></Td>
+<Td><Button class="PurchaseButton" onclick="Build100Headquarters()">Build 100 Headquarters<Br>1.7B🪙</Button></Td></Tr>
+</Table>
+
+
+<Hr width=100% color="darkblue"><Br><Br><Br><center>
+<Div id="smartphone">
+<Table class="phonescreen">
+<Tr>
+<Td bgcolor="#3D3D3D" colspan="5" height="25px">
+<Span id="time"></Span><span id="battery-indicator"><span id="battery-level-bar"></span><span id="battery-percentage"></span><span id="charging-status"></span></span></Td>
+</Tr><Tr><Td><Button>Prev</Button>
+<Button>Next</Button>
+<Button>Reload Page</Button></Td>
+<Td colspan="4" bgcolor="#E8E8E8">www.letsshop.com</Td></Tr>
+<Tr><Td bgcolor=blue colspan="5"><Center><span class="Letshop">Upgrades</span></Td>
+</Tr>
+
+<Tr><Td colspan="5" bgcolor="pink"><B><p><Marquee>🗒️🖥 PC 🖥🗒️</Marquee></p><B></Td></Tr>
+
+<Tr><Td height="170px"><Center><Br><Font size="6">⌨️</Font><p>Old PC<Br>- Price: 1T🪙<Br>- 🗒️/s × 5</p></Td>
+<Td><Center><Br><Font size="6">⌨️🖱️</Font><p>Normal PC<Br>- Price: 5T🪙<Br>- 🗒️/s × 35</p></Td>
+<Td><Center><Br><Font size="6">🖥️🖱️</Font><p>Modern PC<Br>- Price: 25T🪙<Br>- 🗒️/s × 100</p></Td>
+<Td><Center><Br><Font size="6">💻</Font><p>Cool Laptop<Br>- Price: 100T🪙<Br>- 🗒️/s × 750</p></Td>
+<Td><Center><Br><Font size="6">📹🖥️🖱️</Font><p>Youtuber PC<Br>- Price: 550T🪙<Br>- 🗒️/s × 2500</p></Td></Tr>
+
+<Tr><Td><Center><Button class="UpgradeButton" onclick="BuyNormalPC()"><Span id="NormalPCOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyBetterPC()"><Span id="BetterPCOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyModernPC()"><Span id="ModernPCOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyCoolLaptop()"><Span id="CoolLaptopOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyYoutuberPC()"><Span id="YoutuberPCOwn">Buy</Span></Button></Td></Tr>
+
+<Tr><Td height="170px"><Center><Br><Font size="6">🖥️📠</Font><p>Office PC<Br>- Price: 12.5Qa🪙<Br>- 🗒️/s × 37500</p></Td>
+<Td><Center><Br><Font size="6">💻📱</Font><p>Touchscreen Laptop<Br>- Price: 150Qa🪙<Br>- 🗒️/s × 100000</p></Td>
+<Td><Center><Br><Font size="6">🎮🖥️🖱️</Font><p>Gaming PC<Br>- Price: 925Qa🪙<Br>- 🗒️/s × 225000</p></Td>
+<Td><Center><Br><Font size="6">💻🖥️💻</Font><p>Triple-Screen<Br>Deluxe PC<Br>- Price: 5Qi🪙<Br>- 🗒️/s × 650000</p></Td>
+<Td><Center><Br><Font size="6">🤖📝🖥️</Font><p>AI Scriptwriter<Br>- Price: 22.5Qi🪙<Br>- 🗒️/s × 1500000</p></Td></Tr>
+
+<Tr><Td><Center><Button class="UpgradeButton" onclick="BuyOfficePC()"><Span id="OfficePCOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyTouchscreenLaptop()"><Span id="TouchscreenLaptopOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyGamingPC()"><Span id="GamingPCOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyDeluxePC()"><Span id="DeluxePCOwn">Buy</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BuyAIScriptWriter()"><Span id="AIScriptWriterOwn">Buy</Span></Button></Td>
+</Tr>
+
+<Tr><Td colspan="5" height="50px"></Td></Tr><Tr>
+  <Td colspan="5" bgcolor="pink"><b><p><Marquee>💸🏘 Houses 🏘💸</Marquee></p></b></Td>
+
+</Tr>
+<Tr><Td height="170px"><Center><Br><Font size="6">🏠</Font><p>Tiny House<Br>×2🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6">🏡</Font><p>Small House<Br>×4🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6">🏡🚘</Font><p>Modern House<Br>×8🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6">🏡🌄</Font><p>Stranded House<Br>×25🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6">🏘️🚘🏘️</Font><p>Party Estate<Br>×150🪙 every script upload</p></Td></Tr>
+
+<Tr><Td><Center><Button class="UpgradeButton" onclick="TinyHouse()"><Span id="Level10">Level 10</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="SmallHouse()"><Span id="Level30">Level 15</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="ModernHouse()"><Span id="Level50">Level 20</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="StrandedHouse()"><Span id="Level100">Level 30</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="PixelcraftHouse()"><Span id="Level150">Level 50</Span></Button></Td></Tr>
+
+<Tr><Td height="170px"><Center><Br><Font size="6">🏡🏘️🚘</Font><p>Huge Mansion<Br>×500🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6">🏡🌃</Font><p>Cozy Night House<Br>×6250🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6">🏯🌸</Font><p>Japanese Castle<Br>×50000🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6">🌅🏠🏝️</Font><p>Tropical Beach House<Br>×125000🪙 every script upload</p></Td>
+<Td><Center><Br><Font size="6"></Font><p>Rich Apartment<Br>×950000🪙 every script upload</p></Td></Tr>
+
+<Tr><Td><Center><Button class="UpgradeButton" onclick="ModernMansion()"><Span id="Level200">Level 70</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="CozyNightHouse()"><Span id="Level225">Level 100</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="JapaneseCastle()"><Span id="Level350">Level 125</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="BeachHouse()"><Span id="Level425">Level 150</Span></Button></Td>
+<Td><Center><Button class="UpgradeButton" onclick="RichApartment()"><Span id="Level500">Level 200</Span></Button></Td>
+</Tr>
+
+
+
+</Div>
+
+
+
+
+
+
+
+
+
+
+
+</Body>
+</Head>
+</Html>
