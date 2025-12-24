@@ -1,0 +1,168 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+button { cursor: pointer; }
+
+.header {
+    background-color: black;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0px;
+    display: flex;
+}
+
+.nav{
+    display: inline-block;
+    margin-right: 15px
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#smartphone {
+	width: 50%;
+	margin-top: 150px;
+    background: black;
+    padding: 70px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.clicky{
+  width: 200px;
+  height: 200px;
+  border-radius: 18px;
+  background-color: black;
+  color: green;
+  font-size: 35px;
+  font-family: Tahoma, "Trebuchet MS", sans-serif;
+  border: none;
+}
+
+.SellAllScripts {
+  width: 100%;
+  background-color: #C1C1C1;
+}
+
+.PurchaseButton{
+  width: 100%;
+  height: 100%;
+  background-color: #C1C1C1;
+  border-color: black;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.levelup{
+	width: 100%;
+	height: 40px;
+	font-weight: bold;
+}
+
+.bold{
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	background-color: black;
+	font-weight: bold;
+}
+
+.upgrade{
+	color: white;
+	font-weight: 7px;
+}
+
+.UpgradeButton{
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	background-color: blue;
+	font-family: Tahoma, "Trebuchet MS", sans-serif;
+	color: white;
+	border: none;
+	flex: 25%;
+	border-radius: 12px;
+	opacity: 0.7;
+}
+
+#time {
+	color: #FFFFFF;
+}
+
+
+
+.Letshop{
+	font-family: 'Trebuchet MS', sans-serif;
+	color: cyan;
+	font-size: 25px;
+}
+
+.textfont{
+  color: cyan;
+}
+
+.phonebutton {
+  width: 140px;
+  height: 50px;
+  background-color: #3D3A3A;
+  border-color: white;
+  border-radius: 35px;
+}
+
+.phonescreen{
+	width: 620px;
+	background-color: #FFFFFF;
+}
+
+.decor{
+	background-color: yellow;
+	color: red;
+	font-family: Arial, sans-serif;
+}
+
+.decorations{
+  background-color: white;
+  border-width: 32px;
+  border-style: solid;
+  border-color: black;
+}
+
+
+.description{
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.economy-level{
+	font-family: tahoma;
+	background-color: #777777;
+	color: white;
+}
+
+.sps{
+	font-family: tahoma;
+	background-color: #C2C2C2;
+	color: white;
+}
+
+.coin{
+	font-family: tahoma;
+	background-color: #0D9B0F;
+	color: white;
+}
+
+.currency-script{
+	font-family: tahoma;
+	background-color: #0023FF;
+	color: white;
+}
+
