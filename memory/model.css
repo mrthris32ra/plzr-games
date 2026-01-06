@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #d3f0ff;
+}
+
+a {text-decoration: none;}
+
+h1 {
+    color: #333;
+}
+
+.start {
+	height: 30px;
+	border-radius: 16px;
+	background-color: white;
+	border: ;
+	font-family: 'Trebuchet MS', sans-serif;
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    perspective: 1000px;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #2a9d8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card .front {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.card .back {
+    background-color: #00ffaa;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
