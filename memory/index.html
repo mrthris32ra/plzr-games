@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="model.css">
+	<link rel="icon" type="image/x-icon" href="webicon.png">
+</head>
+<body>
+
+    <h1>Memory Game</h1>
+	<p>Choose your grid size and start the game!</p>
+
+    <label for="grid-size">Grid Size:</label>
+    <select id="grid-size">
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+        <option value="5">5x5</option>
+        <option value="7">7x7</option>
+    </select>
+
+    <button class="start" onclick="startGame()">Start</button>
+
+    <div id="game-board"></div>
+	<p>Click the start button again to refresh!</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
