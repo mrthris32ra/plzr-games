@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Energy</title>
+<link rel="stylesheet" href="model.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<script src="script.js"></script>
+<body>
+<div class="game-title">SPACE ENERGY <font size=2 color="grey">(DEMO)</font></div>
+
+
+
+
+<div class="canvas">
+
+<center><p id="description-text"></p></center>
+<img class="satellite" src="assets\satellite.png" onclick="describeSattelite()"></img>
+<img class="asteroids1" src="assets\asteroids.png"></img>
+<img class="asteroids2" src="assets\asteroids.png"></img>
+<img class="spaceship" src="assets\spaceship.png" onclick="describeSpaceship()"></img>
+<img class="earth" src="assets\earth.gif" onclick="describeEarth()"></img>
+</div>
+
+
+<button class="clickbutton" onclick="togglePopup()">Control</button>
+
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+<div class="popup-text">
+<h2>Information</h2>
+<img class="picture" src="assets\satellite.png"></img>
+<div class="text satellite">
+<h4 class="title">Satellite
+</h3>Status: <span id="checkSatelliteStatus">-</span>; Frequency: <span id="countFrequency">2.4</span>GHz; Strength: <span id="signalStrength">100</span>%
+</div>
+<br>
+<img class="picture" src="assets\earth.png"></img>
+<div class="text earth">
+<h4 class="title">Earth</h3>
+Birth rate: <span>14.6</span>/s; Population: <span id="totalPopulation"></span>; Rockets Launched: <span id="totalRocketsLaunched">0</span>
+</div>
+<br>
+<img class="picture" src="assets\spaceship.png"></img>
+<div class="text spaceship">
+<h4 class="title">Spaceship</h3>
+Status: <span id="checkSpaceshipStatus"></span>; Energy: <span id="energyFuel">100</span>%
+</div>
+<br>
+
+</table>
+</div>
+<button id="close" onclick="togglePopup()">X</button>
+</div>
+
+
+
+</body>
+</html>
