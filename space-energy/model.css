@@ -1,0 +1,179 @@
+body {
+	background-color: #dbdbdb;
+	color: #000000;
+	justify-content: center;
+	align-items: center;
+}
+
+button{
+	cursor: pointer;
+}
+.game-title {
+	font-family: "Titillium Web", sans-serif;
+	text-align: center;
+	font-size: 50px;
+}
+
+.text1 {
+	font-family: "Titillium Web", sans-serif;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 50px;
+}
+
+.canvas {
+	width: 70%;
+	height: 68%;
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	background-color: #000000;
+	border-radius: 50px;
+}
+
+#description-text {
+	color: white;
+	font-family: "Titillium Web", sans-serif;
+}
+
+
+.control-buttons {
+	width: 60%;
+	height: 40px;
+	position: absolute;
+	top: 90%;
+	left: 20%;
+	background-color: grey;
+	border-radius: 50px;
+	border: none;
+}
+
+.satellite {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 115px;
+	left: 160px;
+	cursor: pointer;
+}
+
+.asteroids1 {
+	position: absolute;
+	width: 50%;
+	height: 25%;
+	top: 75%;
+}
+
+.asteroids2 {
+	position: absolute;
+	width: 50%;
+	height: 25%;
+	top: 75%;
+	left: 50%;
+}
+
+.spaceship {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 45%;
+	left: 29%;
+	cursor: pointer;
+}
+
+.earth {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 30%;
+	left: 64%;
+	cursor: pointer;
+}
+
+.popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 900px;
+	padding: 120px;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	z-index: 1000;
+	display: none;
+}
+
+#close {
+	border: none;
+	width: 20px;
+	height: 20px;
+	size: 15px;
+	border-radius: 9px;
+	background-color: red;
+	color: white;
+}
+
+.popup-text {
+	font-family: "Titillium Web", sans-serif;
+	size: 12px;
+	width: 600px;
+}
+
+.popup.show {
+	display: block;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 999;
+	display: none;
+}
+
+.overlay.show {
+	display: block;
+}
+
+.clickbutton {
+	margin: 20px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 15px;
+	border: none;
+	box-shadow: 0, 0, 8, 8px;
+}
+
+.title {
+	font-family: "Titillium Web", sans-serif;
+}
+
+.picture {
+	width: 100px;
+	height: 100px;
+}
+
+.text {	position: absolute; }
+
+.text.satellite {
+	width: 500px;
+	left: 250px;
+	top: 180px;
+} 
+
+.text.earth {
+	width: 500px;
+	left: 250px;
+	top: 285px;
+}
+
+.text.spaceship {
+	width: 500px;
+	left: 250px;
+	top: 390px;
+}
