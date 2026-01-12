@@ -1,0 +1,27 @@
+a {text-decoration: none;}
+
+body {
+	font-family: 'Comfortaa', sans-serif;
+}
+
+table{
+	border: none;
+	border-color: white;
+	border-radius: 19px;
+}
+
+
+.answer{
+	border: 1px;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: grey;
+	width: 400px;
+	height: 110px;
+	background-color: white;
+	font-family: 'Comfortaa', sans-serif;
+}
+
+h3{
+	color: purple;
+}
