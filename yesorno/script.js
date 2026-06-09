@@ -1,34 +1,128 @@
-
-
-
-let questions = 1;
-
-
 function start() {
-	document.getElementById("question").textContent = "Are you playing the game Yes or No?";
+    document.getElementById("question").textContent = "Are you playing the game Yes or No?";
 }
 
-function nextquestion() {
-	questions += 1;
-	if (questions > 1){document.getElementById("question").textContent = "Is your mom at home?";}
-	if (questions > 2){document.getElementById("question").textContent = "Will you gonna mess up the house?"}
-	if (questions > 3){document.getElementById("question").textContent = "Are you still a kid?";}
-	if (questions > 4){document.getElementById("question").textContent = "You found a coin dropped on the street. Will you collect it?";}
-	if (questions > 5){document.getElementById("question").textContent = "When teacher gives you homework, will you work on it?";}
-	if (questions > 6){document.getElementById("question").textContent = "Is it good to slap back him after he slaps you?";}
-	if (questions > 7){document.getElementById("question").textContent = "Do you love your parents?";}
-	if (questions > 8){document.getElementById("question").textContent = "You're a kid and you don't know where your parents at. Will you find a security nearby for help?";}
-	if (questions > 9){document.getElementById("question").textContent = "When your mom makes jokes for you, will you insult her only once?";}
-	if (questions > 10){document.getElementById("question").textContent = "You like it when it's raining french fries outside.";}
-	if (questions > 11){document.getElementById("question").textContent = "You found a strange big hole on the street.🕳️ Will you jump inside the hole?";}
-	if (questions > 12){document.getElementById("question").textContent = "Do you hate for having a crush?";}
-	if (questions > 13){document.getElementById("question").textContent = "When you're a programmer but you're busy and someone invites you to their restaurant. Will you accept them?";}
-	if (questions > 14){document.getElementById("question").textContent = "You don't like it when your teacher is making fun of you. Will you scold and yell her?";}
-	if (questions > 15){document.getElementById("question").textContent = "When someone shows you finger heart, will you yell at her to stop doing that?";}
-	if (questions > 16){document.getElementById("question").textContent = "Your school is holding a fast food party. Will you come?";}
-	if (questions > 17){document.getElementById("question").textContent = "Your mom wanted to teach you how to drive. Will you accept her opinion?";}
-	if (questions > 18){document.getElementById("question").textContent = "Do you like sushi with pizza?";}
-	if (questions > 19){document.getElementById("question").textContent = "You win the real lottery and it's not a scam. Will you get very excited for it?";}
-	if (questions > 20){document.getElementById("question").textContent = "Thank you for playing!";}
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const buttonYes = document.getElementById("yes");
+    buttonYes.addEventListener("click", nextQuestion);
+    
+    const buttonNo = document.getElementById("no");
+    buttonNo.addEventListener("click", nextQuestion);
+
+});
+
+
+function nextQuestion() {
+    document.getElementById("question").textContent = generateQuestion();
 }
 
+function generateQuestion() {
+
+    const patterns = [
+        () => `Do you ${pick(actions)}${pick(endings)}`,
+        () => `Did you ${pick(pastActions)}${pick(endings)}`,
+        () => `You just ${pick(actions)}${pick(state)}`,
+        () => `Promise you would ${pick(actions)}${pick(endings)}`,
+        () => `Would you ${pick(actions)}${pick(endings)}`,
+        () => `Have you ${pick(actions)}${pick(endings)}`,
+        () => `Do you think ${pick(statements)}${pick(endings)}`,
+        () => `Do you believe ${pick(statements)}${pick(endings)}`,
+        () => `Have you ever ${pick(pastActions)}${pick(endings)}`,
+        () => `If you could ${pick(hypothetical)}, would you do it${pick(endings)}`,
+        () => `Will you ${pick(decisions)}${pick(endings)}`,
+        () => `Will you ${pick(actions)}${pick(endings)}`,
+        () => `If ${pick(situations)}, would you ${pick(actions)}${pick(endings)}`
+    ];
+
+    const actions = [
+        "try something completely new",
+        "help someone you don't know",
+        "tell the truth in a difficult situation",
+        "take a big risk",
+        "change your daily routine",
+        "make your own game",
+        "forgive someone who hurt you",
+        "stand up for yourself",
+        "follow your dreams",
+        "try to practice your mathematical skill"
+        "learn a difficult skill",
+        "leave your comfort zone",
+        "do something embarrassing in public",
+        "spend time alone without your phone"
+    ];
+
+    const pastActions = [
+        "lied to avoid trouble",
+        "helped a stranger",
+        "regretted a decision you made",
+        "felt proud of yourself",
+        "taken a big risk",
+        "missed an important opportunity",
+        "done something brave",
+        "made a difficult choice"
+    ];
+
+    const hypothetical = [
+        "travel anywhere instantly",
+        "read minds",
+        "be invisible",
+        "restart your life",
+        "live in another world",
+        "control time",
+        "know your future",
+        "change the past"
+    ];
+
+    const statements = [
+        "people can truly change",
+        "honesty is always the best choice",
+        "success brings happiness",
+        "fear can stop someone from growing",
+        "everyone deserves a second chance",
+        "hard work always pays off",
+        "kindness matters more than talent"
+    ];
+
+    const decisions = [
+        "tell the truth even if it hurts someone",
+        "keep a secret forever",
+        "choose money over happiness",
+        "walk away from a bad situation",
+        "admit your mistakes openly",
+        "take responsibility for something difficult"
+    ];
+
+    const situations = [
+        "you found a lost wallet",
+        "you were given a second chance",
+        "you had nothing to lose",
+        "you were under pressure",
+        "no one was watching you",
+        "you had to decide quickly"
+    ];
+
+    const endings = [
+        "?",
+        " right now?",
+        " without hesitation?",
+        " even if it's difficult?",
+        " if it changed your life?",
+        " when no one is watching?"
+    ];
+
+    const state = [
+        "until you lose your mind.", "when they didn't notice what you're doing.",
+        "until they appreciate for what you did.", "when you're bored",
+        "until the past midnight you weren't sleep.", "when someone didn't notice that you're actually",
+        "until you realized that you're in the university.",
+        "until they didn't notice what you're actually doing."
+    ];
+
+    function pick(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    let pattern = pick(patterns);
+    return pattern();
+}
