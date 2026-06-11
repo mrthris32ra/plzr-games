@@ -1,4 +1,4 @@
-function start() {
+window.onload = function() {
     document.getElementById("question").textContent = "Are you playing the game Yes or No?";
 }
 
