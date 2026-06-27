@@ -45,7 +45,7 @@ function generateQuestion() {
         "forgive someone who hurt you",
         "stand up for yourself",
         "follow your dreams",
-        "try to practice your mathematical skill"
+        "try to practice your mathematical skill",
         "learn a difficult skill",
         "leave your comfort zone",
         "do something embarrassing in public",
