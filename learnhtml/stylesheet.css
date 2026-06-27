@@ -1,0 +1,36 @@
+* {
+	border-radius: 20px;
+	font-family: Comfortaa;
+}
+
+body {
+	background: #fff;
+	margin: auto;
+	max-width: 900px;
+}
+
+.learnhtml {
+	padding: 20px;
+	width: 100%;
+	height: 600px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	size: 24px;
+	font-weight: bold;
+}
+
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+.text-box {
+	width: 95%;
+	height: 80%;
+	text-top: 20px;
+	text-left: 20px;
+}

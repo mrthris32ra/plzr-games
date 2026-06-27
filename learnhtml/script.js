@@ -1,0 +1,122 @@
+const questions = [
+  "When was the first HTML Invented?", 
+  "What is the most powerful script to activate HTML?", 
+  "What is the earliest HTML Element before activating it?",
+  "What does HTML stand for, and what is its primary purpose?",
+  "What is the difference between an HTML tag and an HTML element?",
+  "What are HTML attributes, and where are they always specified?",
+  "What is the root element of every standard HTML document?",
+  "Which section contains metadata that is not directly visible to web visitors?",
+  "What is the significance of the <title> tag for SEO and user experience?",
+  "How do you properly comment out code in HTML?",
+  "What happens if you open an HTML file with an unclosed tag?",
+  "What are self-closing or 'empty' tags? Name three examples.",
+  "Which tag is used to create the largest available heading?",
+  "What is the default behavioral difference between the <b> and <strong> tags?",
+  "How do <i> and <em> tags differ conceptually in modern HTML?",
+  "Which HTML tag is used specifically to define a structural paragraph?",
+  "How do you create an ordered (numbered) list?",
+  "How do you create an ordered (bulleted) list?",
+  "What tag is required to define each individual list item?",
+  "What is a description list, and which three tags are used to build it?",
+  "Which tag displays preformatted text exactly as written in the source code?",
+  "What basic structural tags are mandatory to initialize an HTML table?",
+  "What is the structural difference between the <tr>, <td>, and <th> tags?",
+  "How do you make a single table cell stretch across multiple columns?",
+  "How do you make a single table cell span down across multiple rows?",
+  "What is the modern purpose of the <thead>, <tbody>, and <tfoot> tags?",
+  "What is the primary difference between block-level and inline layout elements?",
+  "Why is a <div> classified as a block element while a <span> is inline?",
+  "What is semantic HTML, and why is it preferred over using generic <div> wrappers?",
+  "When should you use an <article> tag instead of a <section> tag?",
+  "What is the structural purpose of the <aside> tag in an article layout?",
+  "Which attribute must you add to an anchor (<a>) tag to point to a URL destination?",
+  "How do you force a hyperlink to safely open in a brand new browser tab?",
+  "What attribute specifies the alternate text for an image if it fails to load?",
+  "Which tag is used to embed an image, and does it require a closing tag?",
+  "How do you configure an image to act as a functional, clickable hyperlink?",
+  "How do you write a link that automatically targets a user's email application?",
+  "What is the difference between an absolute URL path and a relative URL path?",
+  "How can you link to a specific section on the exact same webpage?",
+  "Which tag is used to embed an independent interactive document or webpage inside another?",
+  "What is the default display unit used for sizing image dimensions in HTML attributes?",
+  "What are the two primary HTTP methods used when submitting an HTML <form>?",
+  "What does the action attribute determine inside a form element?",
+  "How do you connect a <label> explicitly to an <input> element for accessibility?",
+  "Which input type should you use to let users choose exactly one option out of a group?",
+  "How do you allow a user to check multiple independent choices simultaneously?",
+  "What input type is optimized for selecting calendar dates natively?",
+  "How do you create a multi-line text container for comments or messages?",
+  "What is the purpose of the placeholder attribute inside an input box?",
+  "How do you make a form input field mandatory before submission?",
+  "What tag is used to build a native dropdown selection list?",
+  "What new native tags did HTML5 introduce to replace external multimedia plugins?",
+  "Which attribute must you add to a <video> tag to show native playback controls?",
+  "What is the structural difference between HTML5 <canvas> and an embedded <svg>?",
+  "What are custom 'data-*' attributes used for in modern web applications?",
+  "Explain the execution differences between using 'async' and 'defer' script attributes.",
+  "What are the native web storage mechanisms introduced by HTML5?",
+  "How does localStorage fundamentally differ from temporary 'sessionStorage'?",
+  "What is the purpose of the HTML5 <picture> element over a standard <img> tag?",
+  "How do you implement native drag-and-drop mechanics using HTML5 attributes?",
+  "What is the purpose of the HTML5 <output> element inside forms?",
+  "What does ARIA stand for, and why is it critical for screen readers?",
+  "How do you use the loading='lazy' attribute to improve initial page load performance?",
+  "What is the purpose of the alt attribute regarding web accessibility compliance?",
+  "What security risks are mitigated by applying the sandbox attribute to an <iframe>?",
+  "Why should you append rel='noopener noreferrer' when using target='_blank'?",
+  "What is a Content Security Policy (CSP), and how is it declared in HTML?",
+  "What are character entities, and how do you display a copyright symbol (©) safely?",
+  "What is the purpose of the srcset attribute within modern image tags?",
+  "What is the difference between structural HTML parsing and DOM tree construction?",
+  "How do you declare the specific text encoding system (e.g., UTF-8) for a webpage?",
+  "What did Tim-Berners Lee taught about HTML and it's funcionalities?",
+  "Does HTML work with Javascript? Explain it more and which is the most common label.",
+  "Does any website only contain Javascript, Python without the primary HTML?",
+  "Why learning HTML can be useful for thoughts and ideas? Write it down in the text box below!",
+  "Does HTML work with all foreign programming languages? Explain it with Javascript Libraries.",
+  "How Netscape is built to be the first with HTML? If it's not true, write it down the explanation!",
+  "",
+  "",
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionEl = document.getElementById('question');
+const answersEl = document.getElementById('answers');
+const scoreEl = document.getElementById('score');
+const nextBtn = document.getElementById('nextBtn');
+
+function loadQuestion() {
+  const q = quiz[currentQuestion];
+  questionEl.textContent = q.question;
+  answersEl.innerHTML = '';
+
+  q.answers.forEach((answer, index) => {
+    const btn = document.createElement('button');
+    btn.textContent = answer;
+    btn.onclick = () => checkAnswer(index);
+    answersEl.appendChild(btn);
+  });
+}
+
+function checkAnswer(selected) {
+  if (selected === quiz[currentQuestion].correct) {
+    score++;
+  }
+  scoreEl.textContent = "Score: " + score;
+}
+
+function randomQuestionGenerator() {
+  let rqg = Math.floor(Math.random() * questions.length);
+  document.getElementById('question').textContent = questions[rqg];
+}
+
+window.onload = function() {
+  randomQuestionGenerator();
+}
+
+
+
+
