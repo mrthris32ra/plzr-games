@@ -104,7 +104,11 @@ button{
 	display: none;
 }
 
-#close {
+.popup.show {
+	display: block;
+}
+
+.close {
 	border: none;
 	width: 20px;
 	height: 20px;
@@ -120,9 +124,6 @@ button{
 	width: 600px;
 }
 
-.popup.show {
-	display: block;
-}
 
 .overlay {
 	position: absolute;
