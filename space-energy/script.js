@@ -6,10 +6,17 @@ let satelliteStatus = "Stable";
 let rocketsLaunched = 0;
 let fuel = 100;
 
-function togglePopup() {
-	document.getElementById("popup").classList.toggle('show');
-	document.getElementById("overlay").classList.toggle('show');
+
+window.onload = function() {
+	document.getElementById("controlpopup").addEventListener("click", togglepopup);
+	document.getElementById("closepopup").addEventListener("click", togglepopup);
+	
+	function togglepopup() {
+		document.getElementById("popup").classList.toggle('show');
+		document.getElementById("overlay").classList.toggle('show');
+	}
 }
+
 
 
 const satelliteDesc = ["Satellites orbit Earth to transmit signals and collect data.", "Satellites need a power source such as solar panels that convert sunlight into electricity, and an antenna to send and receive information.", 
