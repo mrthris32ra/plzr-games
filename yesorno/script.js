@@ -4,11 +4,8 @@ window.onload = function() {
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    const buttonYes = document.getElementById("yes");
-    buttonYes.addEventListener("click", nextQuestion);
-    
-    const buttonNo = document.getElementById("no");
-    buttonNo.addEventListener("click", nextQuestion);
+    document.getElementById("yes").addEventListener("click", nextQuestion);
+    document.getElementById("no").addEventListener("click", nextQuestion);
 
 });
 
