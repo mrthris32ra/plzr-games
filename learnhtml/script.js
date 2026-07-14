@@ -80,34 +80,6 @@ const questions = [
   "",
 ];
 
-let currentQuestion = 0;
-let score = 0;
-
-const questionEl = document.getElementById('question');
-const answersEl = document.getElementById('answers');
-const scoreEl = document.getElementById('score');
-const nextBtn = document.getElementById('nextBtn');
-
-function loadQuestion() {
-  const q = quiz[currentQuestion];
-  questionEl.textContent = q.question;
-  answersEl.innerHTML = '';
-
-  q.answers.forEach((answer, index) => {
-    const btn = document.createElement('button');
-    btn.textContent = answer;
-    btn.onclick = () => checkAnswer(index);
-    answersEl.appendChild(btn);
-  });
-}
-
-function checkAnswer(selected) {
-  if (selected === quiz[currentQuestion].correct) {
-    score++;
-  }
-  scoreEl.textContent = "Score: " + score;
-}
-
 function randomQuestionGenerator() {
   let rqg = Math.floor(Math.random() * questions.length);
   document.getElementById('question').textContent = questions[rqg];
