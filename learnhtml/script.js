@@ -85,7 +85,7 @@ const emojis = ["🤨", "😏", "🫤", "🤓", "😊", "🤔", "💡", "✏️"
 function randomQuestionGenerator() {
   let rqg = Math.floor(Math.random() * questions.length);
   document.getElementById('question').textContent = questions[rqg];
-  let emoji = Math.floor(emojis);
+  let emoji = Math.floor(Math.random() * emojis.length);
   document.getElementById('emoji-text').textContent = emojis[emoji];
 }
 
