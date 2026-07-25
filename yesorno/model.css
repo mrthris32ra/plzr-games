@@ -11,8 +11,19 @@ Body{
 a {text-decoration: none;}
 
 .title {
-	font-size: 65px;
 	color: #CB2CD8;
+}
+
+#yes {
+	background-color: lime;
+	color: white;
+	font-weight: bold;
+}
+
+#no {
+	background-color: red;
+	color: white;
+	font-weight: bold;
 }
 
 .questionboard{
